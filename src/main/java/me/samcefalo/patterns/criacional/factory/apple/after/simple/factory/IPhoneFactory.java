@@ -6,29 +6,41 @@ public enum IPhoneFactory {
 
     IPHONE_X {
         @Override
-        public IPhone orderIPhone() {
+        public IPhone createIPhone() {
             return new IPhoneX();
         }
     },
     IPHONE_XSMAX {
         @Override
-        public IPhone orderIPhone() {
+        public IPhone createIPhone() {
             return new IPhoneXSMax();
         }
     },
     IPHONE_11 {
         @Override
-        public IPhone orderIPhone() {
+        public IPhone createIPhone() {
             return new IPhone11();
         }
     },
     IPHONE_11PRO {
         @Override
-        public IPhone orderIPhone() {
+        public IPhone createIPhone() {
             return new IPhone11Pro();
         }
     };
 
-    public abstract IPhone orderIPhone();
+    public IPhone orderIPhone() {
+        IPhone device = this.createIPhone();
+        if (device != null) {
+            device.getHardware();
+            device.assemble();
+            device.certificates();
+            device.pack();
+        }
+        return device;
+    }
+
+    public abstract IPhone createIPhone();
+
 
 }
