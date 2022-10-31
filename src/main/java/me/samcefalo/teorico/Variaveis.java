@@ -15,7 +15,7 @@ public class Variaveis {
        int[] array = new int[5];
        int[][] matrix = new int[5][5];
        array[0] = 1;
-       matrix[0][0] = 1;
+       matrix[0][0] = 2;
        matrix[0][1] = 2;
        List<Integer> lista = new ArrayList<>();
        HashMap<String, Integer> map = new HashMap<>();
