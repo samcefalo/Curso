@@ -19,12 +19,12 @@ public class Format {
         x = 2.3456;
         Date data = new Date();
 
-        System.out.println(String.format("2 Casas decimais: %.2f", x));
-        System.out.println(String.format("1 Casa decimal: %.1f", x));
-        System.out.println(String.format("Meu nome é %s %s e tenho %d anos", nome, sobrenome, idade));
-        System.out.println(String.format("Horário: %tT", data));
-        System.out.println(String.format("Data: %tD", data));
-        System.out.println(String.format("Mês: %tB", data));
-        System.out.println(String.format("Timestamp: %ts", data));
+        System.out.printf("2 Casas decimais: %.2f%n", x);
+        System.out.printf("1 Casa decimal: %.1f%n", x);
+        System.out.printf("Meu nome é %s %s e tenho %d anos%n", nome, sobrenome, idade);
+        System.out.printf("Horário: %tT%n", data);
+        System.out.printf("Data: %tD%n", data);
+        System.out.printf("Mês: %tB%n", data);
+        System.out.printf("Timestamp: %ts%n", data);
     }
 }
